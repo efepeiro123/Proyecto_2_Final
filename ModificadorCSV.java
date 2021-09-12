@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;  
 
+//La clase contendrá los archivos CSV de los aspirantes y contraseñas de los empleadores.
 public class ModificadorCSV {
     private String estadoARchivo;
     private String encabezado;
