@@ -13,4 +13,34 @@ public class ModificadorCSV {
     public ModificadorCSV(int resultados){
 
     }
+
+
+    public void ordenarASpirantes(){
+
+    }
+
+    public boolean VerificarContrasenia(){
+
+        return variable; //Esta variable sería la booleana de retorno
+    }
+
+    public void limpiarNoAceptados(){
+
+        
+    }
+
+    public void limpiarCompleto(){
+
+    }
+
+    public void agregarAspirante(String[] datos){
+
+    }
+
+    public String mostrarAspirtantes(){
+
+        return variable; //Esta variable tendría los aspirantes a ver.
+    }
+
+
 }
