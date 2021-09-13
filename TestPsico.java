@@ -16,7 +16,7 @@ public class TestPsico {
         return ListaPsico;
     }
 
-    //--->Getters
+
     public String[] getListaPsicoRespuestas() {
         return ListaPsicoRespuestas;
     }
