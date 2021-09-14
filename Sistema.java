@@ -16,7 +16,8 @@ public class Sistema {
     //son tipos de respuesta pero en el diseño no lo escribimos asi 
     // y ver el return del CSV
     public Sistema(){
-        this.respuestasLidTemp = new ArrayList<Sting>();
+        this.respuestasLidTemp = new ArrayList<String>();
+        this.respuestasPsicoTemp = new ArrayList<String>();
     }
     public String[] generarTestLid(){
         return preguntasLid;
@@ -25,11 +26,15 @@ public class Sistema {
         return preguntasPsico;
     }
 
-    public String[] recibirRespuestas(){
+    public String[] recibirRespuestasLid(){
+        return respuestasLid;
+    }
+    
+    public String[] recibirRespuestasPsico(){
         return respuestasLid;
     }
     //Metodos Setters______________________________________________________
-    public boolean setCSV(){
+    public boolean setCV(){
         //return 
     }
 }
