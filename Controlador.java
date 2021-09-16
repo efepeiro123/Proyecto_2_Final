@@ -19,7 +19,7 @@ public class Controlador {
 		// Funciones
 		
 	}
-	public menu (){
+	public void menu(){
 		//System.out.println("Opciones del usuario");
 	}
 }
