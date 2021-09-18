@@ -12,6 +12,9 @@ import java.util.Scanner;
 public class Vista{
     // Atributos
 	Scanner sc = new Scanner(System.in);
+    public void mensajeConcientizacion(){
+        System.out.println("\nLa igualdad es un derecho por el que se sigue luchando hoy en dia, por favor tener en cuenta tomar una decision imparcial con respecto al genero del aspirante.")
+    }
 //Mensaje de bienvenida al programa.
     public void bienvenidad(){
         System.out.println("\nBienvenido al programa de contratación es un gusto tenerte aquí hoy.");
