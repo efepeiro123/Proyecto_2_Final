@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.Arrays;
-import java.util.List;
+
 
 public class Sistema {
     //Atributos__________________________________________________________
@@ -29,20 +28,7 @@ public class Sistema {
     }
 
     public String[] recibirRespuestasLid(){
-		
-		Scanner scan = new Scanner(System.in);
-		ArrayList<Integer> respuestas = new ArrayList<Integer>();
-		System.out.print("Por favor ingrese un caracter");
 
-		while(scan.hasNextInt()){
-			respuestas.add(scan.nextInt());
-		}
-		Integer [] nums = respuestas.toArray(new Integer[0]);			
-		for(int i = 0; i < nums.length; i++){
-		System.out.println(nums[i]);
-		}
-	}   
-}
         return respuestasLid;
     }
     
