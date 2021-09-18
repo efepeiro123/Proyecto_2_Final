@@ -12,12 +12,17 @@ import java.util.Scanner;
 public class Vista{
     // Atributos
 	Scanner sc = new Scanner(System.in);
-    public void mensajeConcientizacion(){
-        System.out.println("\nLa igualdad es un derecho por el que se sigue luchando hoy en dia, por favor tener en cuenta tomar una decision imparcial con respecto al genero del aspirante.")
+
+    public Vista(){
+
     }
 //Mensaje de bienvenida al programa.
-    public void bienvenidad(){
-        System.out.println("\nBienvenido al programa de contratación es un gusto tenerte aquí hoy.");
+    public void bienvenida(){
+        System.out.println("\n------- Bienvenido al programa de contratación es un gusto tenerte aquí hoy -------\n");
+    }
+
+    public void mensajeConcientizacion(){
+        System.out.println("\nLa igualdad es un derecho por el que se sigue luchando hoy en dia, por favor tener en cuenta tomar una decision imparcial con respecto al genero del aspirante.");
     }
     //Cierra las funciones del programa y muestra mensaje de bienvenida.
     public void salir(){
@@ -26,18 +31,19 @@ public class Vista{
     //Menú principal.
     public String menu(){
         
-        System.out.println("\nUsted es un Aspirante o Empleador?:");
+        System.out.println("\n¿Usted es un Aspirante o Empleador?:");
         System.out.println("\n1. Aspirante");
-        System.out.println("\n2. Empleador");
+        System.out.println("\n2. Empleador\n");
 
 		return sc.nextLine();
 	}
     public String menuAspi(){
 		String op;
         System.out.println("\nAspirante");
-        System.out.println("\nRealizar test psicologico");
-        System.out.println("\nRealizar test lider");
-        System.out.println("\nSalir");
+        System.out.println("Ingrese el numero de la opcion que desea realizar\n");
+        System.out.println("1. Realizar test psicologico");
+        System.out.println("2. Realizar test lider");
+        System.out.println("3. Salir");
 
 		op = sc.nextLine();
 		return op;
@@ -46,17 +52,36 @@ public class Vista{
 
 	public String menuEmpleadores(){
         System.out.println("\nEmpleador");   
-        System.out.println("\nVer resultados");
-        System.out.println("\nDeterminar Top de Aspirantes");
-        System.out.println("\nSalir");
+        System.out.println("\n1. Ver resultados");
+        System.out.println("\n2. Determinar Top de Aspirantes");
+        System.out.println("\n3. Salir");
           
 
 		return sc.nextLine();
     } 
     //Muestra las preguntas instanciadas en Sistema de la clase TestLider.
-    public void mostrarTest(String[]test){
-
+    public void mostrarTest(String[]test, String [] respuestasU){
+        String respuesta;
+        for (int i = 0; i < test.length; i++) {
+            System.out.println(test[i]);
+            respuesta = sc.nextLine();
+            respuestasU[i] = respuesta.toUpperCase();
+        }
+        // String [] info = respuestasU;
+        // System.out.println(info);
+        // System.out.print(test);
+       // return respuestasU;
     }
+
+    /**
+     * Metodo para mostrar cualquier tipo de información
+     * @param informacion
+     */
+    public void verInformacion(String informacion){
+        System.out.println(informacion);
+    }
+
+    
      //Pedir al usuario los nuevos aspirantes que han tomado los Tests. 
     public String[] nuevoAspirante(){
         String dpi, nombre, numero, correo;

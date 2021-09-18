@@ -22,10 +22,10 @@ public class ModificadorCSV {
 
     }
 
-    public boolean VerificarContrasenia(){
+    // public boolean VerificarContrasenia(){
 
-        return variable; //Esta variable sería la booleana de retorno
-    }
+    //     return variable; //Esta variable sería la booleana de retorno
+    // }
 
     public void limpiarNoAceptados(){
 
@@ -62,10 +62,10 @@ public class ModificadorCSV {
 
     }
 
-    public String mostrarAspirtantes(){
+    // public String mostrarAspirtantes(){
 
-        return variable; //Esta variable tendría los aspirantes a ver.
-    }
+    //     return variable; //Esta variable tendría los aspirantes a ver.
+    // }
 
 
 }
