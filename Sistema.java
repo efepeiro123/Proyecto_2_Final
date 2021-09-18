@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
+
 public class Sistema {
     //Atributos__________________________________________________________
     private ArrayList<String> respuestasLidTemp;
@@ -27,6 +28,7 @@ public class Sistema {
     }
 
     public String[] recibirRespuestasLid(){
+
         return respuestasLid;
     }
     
