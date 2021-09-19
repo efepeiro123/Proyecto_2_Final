@@ -85,7 +85,7 @@ public class Vista{
      //Pedir al usuario los nuevos aspirantes que han tomado los Tests. 
     public String[] nuevoAspirante(){
         String dpi, nombre, numero, correo;
-        String[] informacion = new String[4];
+        String[] informacion = new String[5];
         System.out.println("\nPorfavor ingrese los siguientes datos: ");
         System.out.println("\nDpi: ");
         dpi = sc.nextLine();

@@ -54,7 +54,7 @@ public class Sistema {
         }
 
         respuestasLidTemp.clear();
-        return "Punteo Final: " + punteo;
+        return Integer.toString(punteo);
     }
     
     // public String[] recibirRespuestasPsico(){

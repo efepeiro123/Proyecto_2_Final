@@ -12,13 +12,13 @@ public class Controlador {
     // --> Atributos
     private Vista vista;
     private Sistema sistema; // modelo
-	//ModificadorCSV modificador;
+	private ModificadorCSV modificador;
 	
 	// Constructor
 	public Controlador (){
 		vista = new Vista();
         sistema = new Sistema();
-        //modificador = new Modificador;
+	    modificador = new ModificadorCSV();
         vista.bienvenida();
         vista.mensajeConcientizacion();
 	}
@@ -36,6 +36,7 @@ public class Controlador {
 
             
                 case "1":
+
                     String opcionAspirante = vista.menuAspi();
                     tipoPersona = "Aspirante"; 
 
@@ -50,12 +51,18 @@ public class Controlador {
                     * Si selecciona la opcion 2 entonces realizara el test de capacidadees 
                     */
                     else if(opcionAspirante.equals("2")){
-                        String [] preguntasObtenidas = sistema.generarTestLid();
+						String [] preguntasObtenidas = sistema.generarTestLid();
                         String [] respuestasUsuario = new String[preguntasObtenidas.length];
+						String[] datosPersona = vista.nuevoAspirante();
+						
                         vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
 
                     
                         String respuestasFinales = sistema.recibirRespuestasLid(respuestasUsuario);
+
+						datosPersona[4] = respuestasFinales;
+
+						modificador.agregarAspirante(datosPersona);
                         vista.verInformacion(respuestasFinales);
                     }
 
