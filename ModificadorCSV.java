@@ -53,9 +53,9 @@ public class ModificadorCSV {
             br.close();
 			
 		}catch(FileNotFoundException e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}catch(IOException e){
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
         return aspirantesarreglo;
     }

@@ -19,8 +19,10 @@ public class Controlador {
 		vista = new Vista();
         sistema = new Sistema();
 	    modificador = new ModificadorCSV();
+        vista.DivisionAsteriscos();
         vista.bienvenida();
         vista.mensajeConcientizacion();
+        vista.DivisionAsteriscos();
 	}
 
      /**
@@ -36,7 +38,7 @@ public class Controlador {
 
             
                 case "1":
-
+                    //agregar division division asteriscos
                     String opcionAspirante = vista.menuAspi();
                     tipoPersona = "Aspirante"; 
 
@@ -51,10 +53,14 @@ public class Controlador {
                     * Si selecciona la opcion 2 entonces realizara el test de capacidadees 
                     */
                     else if(opcionAspirante.equals("2")){
+                        //agregar una division de asteriscos
+
+                        vista.DivisionAsteriscos();
 						String [] preguntasObtenidas = sistema.generarTestLid();
                         String [] respuestasUsuario = new String[preguntasObtenidas.length];
 						String[] datosPersona = vista.nuevoAspirante();
 						
+                        
                         vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
 
                     
@@ -63,7 +69,7 @@ public class Controlador {
 						datosPersona[4] = respuestasFinales;
 
 						modificador.agregarAspirante(datosPersona);
-                        vista.verInformacion(respuestasFinales);
+                        //vista.verInformacion(respuestasFinales);
                     }
 
                     /**

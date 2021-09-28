@@ -22,7 +22,8 @@ public class Vista{
     }
 
     public void mensajeConcientizacion(){
-        System.out.println("\nLa igualdad es un derecho por el que se sigue luchando hoy en dia, por favor tener en cuenta tomar una decision imparcial con respecto al genero del aspirante.");
+        System.out.println("\nLa igualdad es un derecho por el que se sigue luchando hoy en dia, por favor tener");
+        System.out.println("en cuenta tomar una decision imparcial con respecto al genero del aspirante.\n"); 
     }
     //Cierra las funciones del programa y muestra mensaje de bienvenida.
     public void salir(){
@@ -43,7 +44,7 @@ public class Vista{
         System.out.println("Ingrese el numero de la opcion que desea realizar\n");
         System.out.println("1. Realizar test psicologico");
         System.out.println("2. Realizar test lider");
-        System.out.println("3. Salir");
+        System.out.println("3. Salir\n");
 
 		op = sc.nextLine();
 		return op;
@@ -73,6 +74,17 @@ public class Vista{
        // return respuestasU;
     }
 
+    public void DivisionAsteriscos(){
+        System.out.println("************************************************************************************");
+    }
+
+    public void DivisionGuiones(){
+        System.out.println("------------------------------------------------------------------------------------");
+    }
+
+    public void DivisionLinea(){
+        System.out.println("____________________________________________________________________________________");
+    }
     /**
      * Metodo para mostrar cualquier tipo de información
      * @param informacion
@@ -98,6 +110,8 @@ public class Vista{
         
         System.out.println("\nCorreo: ");
         correo = sc.nextLine();
+
+        System.out.println("");
 
         informacion[0] = dpi;
         informacion[1] = nombre;
