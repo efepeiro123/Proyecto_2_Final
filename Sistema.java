@@ -29,14 +29,22 @@ public class Sistema {
         respuestasLid = testLider.getListaLidRespuestas();
         int max = preguntasLid.length - 1; 
         int min = 0;
-
+        ArrayList<Integer> repetidos = new ArrayList<Integer>();
+        repetidos.clear();
         int preguntasSolicitadas = 10;
         String [] obtenerPreguntas = new String[preguntasSolicitadas];
-        for (int i = 0; i < preguntasSolicitadas; i++) {
-            int seleccionador = rand.nextInt((max - min ) + 1) + min; 
-            obtenerPreguntas[i] = preguntasLid[seleccionador];
-            respuestasLidTemp.add(respuestasLid[seleccionador]);
+        for (int i = 0; i < preguntasSolicitadas; i++){
+            Integer seleccionador = rand.nextInt((max - min ) + 1) + min;
+            if(repetidos.contains(seleccionador)==false){
+                repetidos.add(seleccionador); 
+                obtenerPreguntas[i] = preguntasLid[seleccionador];
+                respuestasLidTemp.add(respuestasLid[seleccionador]);
+           }else{
+               i--;
+            }
         }
+
+        
         return obtenerPreguntas;
     }
     // public String[] generarTestPsico(){
