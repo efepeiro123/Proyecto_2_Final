@@ -38,7 +38,7 @@ public class Controlador {
 
             
                 case "1":
-                    //agregar division division asteriscos
+                    vista.DivisionAsteriscos();
                     String opcionAspirante = vista.menuAspi();
                     tipoPersona = "Aspirante"; 
 
@@ -53,7 +53,7 @@ public class Controlador {
                     * Si selecciona la opcion 2 entonces realizara el test de capacidadees 
                     */
                     else if(opcionAspirante.equals("2")){
-                        //agregar una division de asteriscos
+                    
 
                         vista.DivisionAsteriscos();
 						String [] preguntasObtenidas = sistema.generarTestLid();
