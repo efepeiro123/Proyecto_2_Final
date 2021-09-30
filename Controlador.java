@@ -2,23 +2,28 @@
  * <h1> Proyecto Integrador -  sistema de contratación 
  * <h2> Programación Orientada a Objetos </h1>
  * @author 
- * @since 12-septiembre-2021
- * @version 1.0
+ * @since3 3-octubre-2021
+ * @version 2.0
  * @category Controlador 
  */
 
 
 public class Controlador {
-    // --> Atributos
-    private Vista vista;
+
+    // --> Atributos e instancias de clases.
+    private Vista vista; // vista
     private Sistema sistema; // modelo
-	private ModificadorCSV modificador;
+	private ModificadorCSV modificador; //modelo 
 	
 	// Constructor
 	public Controlador (){
+
+        // Objetos
 		vista = new Vista();
         sistema = new Sistema();
 	    modificador = new ModificadorCSV();
+
+        // Determinacion de los metodos de cada clase.   
         vista.DivisionAsteriscos();
         vista.bienvenida();
         vista.mensajeConcientizacion();
@@ -34,7 +39,7 @@ public class Controlador {
 
         do {
             
-            switch (vista.menu()) {
+            switch (vista.menu()) {  // En relacion con la respuesta int del usuario.
 
             
                 case "1":
@@ -56,15 +61,15 @@ public class Controlador {
                     
 
                         vista.DivisionAsteriscos();
-						String [] preguntasObtenidas = sistema.generarTestLid();
-                        String [] respuestasUsuario = new String[preguntasObtenidas.length];
-						String[] datosPersona = vista.nuevoAspirante();
+						String [] preguntasObtenidas = sistema.generarTestLid();     // Llamado al arreglo con las preguntas del Test Lider. 
+                        String [] respuestasUsuario = new String[preguntasObtenidas.length];   // Arreglo que almacena las respuesta del usuario.
+						String[] datosPersona = vista.nuevoAspirante();  // Informacion del nuevo aspirante.
 						
                         
                         vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
 
                     
-                        String respuestasFinales = sistema.recibirRespuestasLid(respuestasUsuario);
+                        String respuestasFinales = sistema.recibirRespuestasLid(respuestasUsuario);  // Respuestas del usuario a las preguntas de Test Lide. 
 
 						datosPersona[4] = respuestasFinales;
 
@@ -81,7 +86,7 @@ public class Controlador {
                     }
 
                     else{
-                        vista.invalido();
+                        vista.invalido(); // Mensaje de error para el usuario.
                     }
 
                 break;									                					                
