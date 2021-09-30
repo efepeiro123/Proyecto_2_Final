@@ -2,7 +2,7 @@
  * <h1> Proyecto Integrador - Programa de contratación 
  * <h2> Programación Orientada a Objetos </h1>
  * @author
- * @since 12-septiembre-2021
+ * @since 3-octubre-2021
  * @version 1.0
  * @category Vista 
  */

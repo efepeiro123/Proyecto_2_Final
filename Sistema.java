@@ -1,3 +1,14 @@
+/**
+ * <h1> Proyecto Integrador -  sistema de contratación 
+ * <h2> Programación Orientada a Objetos </h1>
+ * @author 
+ * @since3 3-octubre-2021
+ * @version 2.0
+ * @category Modelo
+ */
+
+
+ // Paquete defaults de java. 
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -10,6 +21,7 @@ public class Sistema {
     private Random rand;
     private String[] preguntasLid = new String[1];
     private String[] respuestasLid = new String[1];
+
    // private String[] preguntasPsico;
    // private String[] respuestasPsico;
     
@@ -17,6 +29,8 @@ public class Sistema {
     //Revisar los returns porque solo hay un tipo de respuesta porque son 
     //son tipos de respuesta pero en el diseño no lo escribimos asi 
     // y ver el return del CSV
+
+
     public Sistema(){
         rand = new Random(); 
         testLider = new TestLider();
