@@ -1,11 +1,21 @@
 /**
  * <h1> Proyecto Integrador -  sistema de contratación 
- * <h2> Programación Orientada a Objetos </h1>
- * @author 
+ * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h3> TestLider (Forma parte del Modelo)  </h2>
+ * 
+ * 
+ * Descripción: La clase test instancia una serie de Strings[] que corresponden a
+ * las preguntas de un test encapsulado en un arreglo. Se llevará al controlador; 
+ * posteriormente a la vista. Se debe mencionar que las preguntas serán seleccionadas
+ * de forma random. 
+ * 
+ * 
+ * @author Grupo 4 
  * @since3 3-octubre-2021
- * @version 2.0
+ * @version 1.0
  * @category Modelo
  */
+
 
 public class TestLider{
     //Atributos__________________________________________________________ 

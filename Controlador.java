@@ -1,9 +1,17 @@
 /**
  * <h1> Proyecto Integrador -  sistema de contratación 
- * <h2> Programación Orientada a Objetos </h1>
- * @author 
+ * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h3> Controlador (Clase de tipo controlador) </h2>
+ * 
+ * 
+ * Descripción: Esta clase se comunicará con el modelo (Sistema, modificadorCSV, test) 
+ * y se comunicará con la clase Vista. Como su nombre lo dice controlará el programa
+ *  encargándose de que vista y modelo se comuniquen.
+ * 
+ * 
+ * @author Grupo 4 
  * @since3 3-octubre-2021
- * @version 2.0
+ * @version 1.0
  * @category Controlador 
  */
 

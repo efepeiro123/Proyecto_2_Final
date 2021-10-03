@@ -1,12 +1,21 @@
 /**
  * <h1> Proyecto Integrador -  sistema de contratación 
- * <h2> Programación Orientada a Objetos </h1>
- * @author 
+ * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h3> Sistema (Forma parte del Modelo) </h2>
+ * 
+ * 
+ * Descripción: Relaciona las clases de TestPsico, TestLider y Controlador. 
+ * Se encarga de seleccionar las preguntas de manera aleatoria de los test de 
+ * Líder y Psicología; además, este contará con las respuestas a las preguntas 
+ * que posteriormente se enviarán a la clase a ModificadorCSV. Mayormente contará
+ * con ArrayList.
+ * 
+ * 
+ * @author Grupo 4 
  * @since3 3-octubre-2021
- * @version 2.0
- * @category Modelo
+ * @version 1.0
+ * @category Modelo 
  */
-
 
  // Paquete defaults de java. 
 import java.util.ArrayList;
