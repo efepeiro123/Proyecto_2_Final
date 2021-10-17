@@ -1,11 +1,20 @@
     /**
  * <h1> Proyecto Integrador -  sistema de contratación 
- * <h2> Programación Orientada a Objetos </h1>
- * @author 
+ * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h3> ModificadorCSV (Forma parte del Modelo) </h2>
+ * 
+ * 
+ * Descripción: Esta clase se escribe en un documento CSV que almacena 
+ * los datos de todos los candidatos con sus datos personales y su puntaje 
+ * en los test realizados, el teórico y el psicológico. 
+ * 
+ * 
+ * @author Grupo 4 
  * @since3 3-octubre-2021
- * @version 2.0
- * @category Modelo
+ * @version 1.0
+ * @category Modelo 
  */
+
 
 import java.io.File;
 import java.io.BufferedWriter;

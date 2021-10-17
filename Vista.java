@@ -1,10 +1,18 @@
 /**
- * <h1> Proyecto Integrador - Programa de contratación 
- * <h2> Programación Orientada a Objetos </h1>
- * @author
- * @since 3-octubre-2021
+ * <h1> Proyecto Integrador -  sistema de contratación 
+ * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h3> Vista (Clase de tipo Vista)  </h2>
+ * 
+ * 
+ * Descripción: Esta clase mostrará toda la información que se necesite que 
+ * sea vista por el usuario, tanto para dar instrucciones como para solicitar 
+ * información o algún otro tipo de interacción.
+ * 
+ * 
+ * @author Grupo 4 
+ * @since3 3-octubre-2021
  * @version 1.0
- * @category Vista 
+ * @category  Vista
  */
  
 import java.util.Scanner;
