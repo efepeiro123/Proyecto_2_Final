@@ -1,4 +1,4 @@
-/**
+    /**
  * <h1> Proyecto Integrador -  sistema de contratación 
  * <h2> Programación Orientada a Objetos </h1>
  * @author 
@@ -37,7 +37,7 @@ public class ModificadorCSV {
     //     return variable; //Esta variable sería la booleana de retorno
     // }
 
-    public void limpiarNoAceptados(){
+    public void limpiarNoAceptados(int aceptados){
 
         
     }
@@ -91,7 +91,7 @@ public class ModificadorCSV {
             bw.close();
         }catch(IOException e){
             System.out.println("");
-            //e.printStackTrace();
+            e.printStackTrace();
         }
 
     }

@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * <h1> Proyecto Integrador -  sistema de contratación 
  * <h2> Programación Orientada a Objetos </h1>
@@ -99,7 +101,11 @@ public class Controlador {
                     * Si selecciona la opcion 1 entonces vera los resultados 
                     */
                     if(opcionEmpleador.equals("1")){
-
+                        ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
+                        aspirantesarreglo = modificador.prepararCSV();
+                        vista.DivisionAsteriscos();
+                        vista.mostrarListaResultados(aspirantesarreglo);
+                        vista.DivisionAsteriscos();
                     }
 
                     /**
