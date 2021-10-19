@@ -16,13 +16,14 @@
  */
  
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Vista{
     // Atributos
 	Scanner sc = new Scanner(System.in);
 
     public Vista(){
-
+        
     }
 //Mensaje de bienvenida al programa.
     public void bienvenida(){
@@ -33,7 +34,7 @@ public class Vista{
         System.out.println("\nLa igualdad es un derecho por el que se sigue luchando hoy en dia, por favor tener");
         System.out.println("en cuenta tomar una decision imparcial con respecto al genero del aspirante.\n"); 
     }
-    //Cierra las funciones del programa y muestra mensaje de bienvenida.
+    //Cierra las funciones del programa y muestra mensaje de despedida.
     public void salir(){
         System.out.println("\nGracias por la preferencia nos vemos pronto.");
     }
@@ -58,7 +59,7 @@ public class Vista{
 		return op;
 		
 	}
-
+    
 	public String menuEmpleadores(){
         System.out.println("\nEmpleador");   
         System.out.println("\n1. Ver resultados");
@@ -68,6 +69,16 @@ public class Vista{
 
 		return sc.nextLine();
     } 
+/**
+ * Se encarga de mostrar el resultado de los aspirantes solo mostrando su DPI y calificación
+ * @param aspirantesarreglo es el arreglo que contiene los datos de cada aspirante.
+ */
+    public void mostrarListaResultados(ArrayList<String[]> aspirantesarreglo){
+        System.out.println("Los resultados de los aspirantes son: ");
+        for(int asp =0;asp<aspirantesarreglo.size();asp++){
+             System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación: " +aspirantesarreglo.get(asp)[4]);
+        }
+    }
     //Muestra las preguntas instanciadas en Sistema de la clase TestLider.
     public void mostrarTest(String[]test, String [] respuestasU){
         String respuesta;
