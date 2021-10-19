@@ -140,6 +140,12 @@ public class Vista{
         return informacion; 
 
     }
+    //Pedir contraseña a los empleadores
+    public String[] preguntarContrasena(){
+        System.out.println("\nPorfavor ingrese su contraseña");
+        contra = sc.nextLine();
+        return contra;
+    }
      //Mensaje de error que se le muestra al usuario.
     public void invalido(){
 
