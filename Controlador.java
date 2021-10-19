@@ -19,25 +19,21 @@ import java.util.ArrayList;
 
 
 public class Controlador {
-
-    // --> Atributos e instancias de clases.
-    private Vista vista; // vista
+    // --> Atributos
+    private Vista vista;
     private Sistema sistema; // modelo
-	private ModificadorCSV modificador; //modelo 
+	private ModificadorCSV modificador;
+    private GeneradorLid GLider;
+    private GeneradorPsico GPsico;
 	
 	// Constructor
 	public Controlador (){
-
-        // Objetos
 		vista = new Vista();
-        sistema = new Sistema();
-	    modificador = new ModificadorCSV();
-
-        // Determinacion de los metodos de cada clase.   
-        vista.DivisionAsteriscos();
+        GLider = new GeneradorLid();
+        GPsico = new GeneradorPsico();
+        modificador = new ModificadorCSV();
         vista.bienvenida();
         vista.mensajeConcientizacion();
-        vista.DivisionAsteriscos();
 	}
 
      /**
@@ -49,11 +45,10 @@ public class Controlador {
 
         do {
             
-            switch (vista.menu()) {  // En relacion con la respuesta int del usuario.
+            switch (vista.menu()) {
 
             
                 case "1":
-                    vista.DivisionAsteriscos();
                     String opcionAspirante = vista.menuAspi();
                     tipoPersona = "Aspirante"; 
 
@@ -61,30 +56,35 @@ public class Controlador {
                     * Si selecciona la opcion 1 entonces realizara el test psicologico
                     */
                     if(opcionAspirante.equals("1")){
+                        String [] preguntasObtenidas = GPsico.generarTest();
+                        String [] respuestasUsuario = new String[preguntasObtenidas.length];
+                        String [] datosPersona = vista.nuevoAspirante();
+                        
+                        vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
 
+                        //PARTE DE KEVIN
+                        //String respuestasFinales = sistema.recibirRespuestas(respuestasUsuario);
+                        //datosPersona[4] = respuestasFinales;
+                        //modificador.agregarAspirante(datosPersona);
+                        //vista.verInformacion(respuestasFinales);
                     }
 
                     /**
                     * Si selecciona la opcion 2 entonces realizara el test de capacidadees 
                     */
                     else if(opcionAspirante.equals("2")){
-                    
+                        String [] preguntasObtenidas = GLider.generarTest();
+                        String [] respuestasUsuario = new String[preguntasObtenidas.length];
+                        String [] datosPersona = vista.nuevoAspirante();
 
-                        vista.DivisionAsteriscos();
-						String [] preguntasObtenidas = sistema.generarTestLid();     // Llamado al arreglo con las preguntas del Test Lider. 
-                        String [] respuestasUsuario = new String[preguntasObtenidas.length];   // Arreglo que almacena las respuesta del usuario.
-						String[] datosPersona = vista.nuevoAspirante();  // Informacion del nuevo aspirante.
-						
-                        
                         vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
-
-                    
-                        String respuestasFinales = sistema.recibirRespuestasLid(respuestasUsuario);  // Respuestas del usuario a las preguntas de Test Lide. 
-
-						datosPersona[4] = respuestasFinales;
-
-						modificador.agregarAspirante(datosPersona);
+                       
+                    //PARTE DE KEVIN
+                        //String respuestasFinales = sistema.recibirRespuestas(respuestasUsuario);
+                        //datosPersona[4] = respuestasFinales;
+                        //modificador.agregarAspirante(datosPersona);
                         //vista.verInformacion(respuestasFinales);
+                      //  String infoFila = modificador.saveChanges(file)
                     }
 
                     /**
