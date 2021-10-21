@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class GeneradorPsico extends Sistema implements SistemaGenerarTest{
  
     @Override

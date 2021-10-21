@@ -20,26 +20,23 @@ import java.util.ArrayList;
 
 public class Controlador {
     // --> Atributos
-    private Vista vista;
-    private Sistema sistema; // modelo
-	private ModificadorCSV modificador;
-    private GeneradorLid GLider;
-    private GeneradorPsico GPsico;
+    private Vista vista; // vista
+    private GeneradorLid sistemaGeneradorLid;
+    private GeneradorPsico sistemaGeneradorPsico; // modelo
+    private CalificadorLid sistemaCalificadorLid;
+    private CalificadorPsico sistemaCalificadorPsico;
+	private ModificadorCSV modificador; //modelo 
 
-    // Calificadores
-    private CalificadorLid CLider;
-    private CalificadorPsico CPsico;
+    
 	
 	// Constructor
 	public Controlador (){
 		vista = new Vista();
-        GLider = new GeneradorLid();
-        GPsico = new GeneradorPsico();
-        CLider = new CalificadorLid();
-        CPsico = new CalificadorPsico();
-        modificador = new ModificadorCSV();
-        vista.bienvenida();
-        vista.mensajeConcientizacion();
+        sistemaCalificadorPsico = new CalificadorPsico();
+        sistemaCalificadorLid = new CalificadorLid();
+        sistemaGeneradorLid = new GeneradorLid();
+        sistemaGeneradorPsico = new GeneradorPsico();
+	    modificador = new ModificadorCSV();
 	}
 
      /**
@@ -55,60 +52,67 @@ public class Controlador {
 
             
                 case "1":
-                    String opcionAspirante = vista.menuAspi();
-                    tipoPersona = "Aspirante"; 
+                vista.DivisionAsteriscos();
+                String opcionAspirante = vista.menuAspi();
+                tipoPersona = "Aspirante"; 
 
-                    /**
-                    * Si selecciona la opcion 1 entonces realizara el test psicologico
-                    */
-                    if(opcionAspirante.equals("1")){
-                        String [] preguntasObtenidas = GPsico.generarTest();
-                        String [] respuestasUsuario = new String[preguntasObtenidas.length];
-                        String [] datosPersona = vista.nuevoAspirante();
-                        
-                        vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
+                /**
+                * Si selecciona la opcion 1 entonces realizaran ambos test
+                */
+                if(opcionAspirante.equals("1")){
+                
+                    //****************Lid ******************************/
+                    vista.verInformacion("En este momento realizará el examen de habilidades de liderazgo.\n");
+                    vista.DivisionAsteriscos();
+                    String [] preguntasObtenidasLid = sistemaGeneradorLid.generarTest();     // Llamado al arreglo con las preguntas del Test Lider. 
+                    String [] respuestasUsuarioLid = new String[preguntasObtenidasLid.length];   // Arreglo que almacena las respuesta del usuario.
+                    String[] datosPersona = vista.nuevoAspirante();  // Informacion del nuevo aspirante.
+                    
+                    
+                    vista.mostrarTest(preguntasObtenidasLid, respuestasUsuarioLid);
 
-                        // Calificar el test Psicologico.
+                    ArrayList<String> respuestasCorrLid = sistemaGeneradorLid.getRespuestasLid();
+                    String respuestasFinalesLid = sistemaCalificadorLid.recibirRespuestas(respuestasUsuarioLid, respuestasCorrLid);  // Respuestas del usuario a las preguntas de Test Lide. 
+                    System.out.println(respuestasFinalesLid);
+                    
 
-                        
-                        //PARTE DE KEVIN
-                        //String respuestasFinales = sistema.recibirRespuestas(respuestasUsuario);
-                        //datosPersona[4] = respuestasFinales;
-                        //modificador.agregarAspirante(datosPersona);
-                        //vista.verInformacion(respuestasFinales);
-                    }
+                    datosPersona[4] = respuestasFinalesLid;
+                    vista.verInformacion("\nHa completado el examen de habilidades de liderazgo. En este momento realizara el examen psicologico.\n");
+                    //modificador.agregarAspirante(datosPersona);
+                    
 
-                    /**
-                    * Si selecciona la opcion 2 entonces realizara el test de capacidadees 
-                    */
-                    else if(opcionAspirante.equals("2")){
-                        String [] preguntasObtenidas = GLider.generarTest();
-                        String [] respuestasUsuario = new String[preguntasObtenidas.length];
-                        String [] datosPersona = vista.nuevoAspirante();
+                    //*********psico *********************************/
+                    vista.DivisionAsteriscos();
+                    String [] preguntasObtenidasPsico = sistemaGeneradorPsico.generarTest();     // Llamado al arreglo con las preguntas del Test Lider. 
+                    String [] respuestasUsuarioPsico = new String[preguntasObtenidasPsico.length];   // Arreglo que almacena las respuesta del usuario.
+                    
+                    
+                    vista.mostrarTest(preguntasObtenidasPsico, respuestasUsuarioPsico);
 
-                        vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
-                       
-                    //PARTE DE KEVIN
-                        //String respuestasFinales = sistema.recibirRespuestas(respuestasUsuario);
-                        //datosPersona[4] = respuestasFinales;
-                        //modificador.agregarAspirante(datosPersona);
-                        //vista.verInformacion(respuestasFinales);
-                      //  String infoFila = modificador.saveChanges(file)
-                    }
+                    ArrayList<String> respuestasCorrPsico = sistemaGeneradorPsico.getRespuestasPsico();
+                    String respuestasFinalesPsico = sistemaCalificadorPsico.recibirRespuestas(respuestasUsuarioPsico, respuestasCorrPsico);  // Respuestas del usuario a las preguntas de Test Lide. 
+                    System.out.println(respuestasFinalesPsico);
 
-                    /**
-                    * Si selecciona la opcion 3 entonces se termina el programa
-                    */
-                    else if(opcionAspirante.equals("3")){
-                        vista.salir(); //mensaje de despedida
-                        terminar = true;
-                    }
+                    datosPersona[5] = respuestasFinalesPsico;
 
-                    else{
-                        vista.invalido(); // Mensaje de error para el usuario.
-                    }
+                    modificador.agregarAspirante(datosPersona);
+                    vista.verInformacion("\nHa finalizado el examen psicologico. Agradecemos mucho su participacion. Sera contactado por medio de la informacion de contacto brindada en caso de ser seleccionado.\n");
 
-                break;									                					                
+                }
+
+                /**
+                * Si selecciona la opcion 3 entonces se termina el programa
+                */
+                else if(opcionAspirante.equals("2")){
+                    vista.salir(); //mensaje de despedida
+                    terminar = true;
+                }
+
+                else{
+                    vista.invalido(); // Mensaje de error para el usuario.
+                }
+
+            break;									                					                
 					
                 case "2":
                     String opcionEmpleador = vista.menuEmpleadores();

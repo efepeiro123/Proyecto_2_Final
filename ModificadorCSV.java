@@ -36,7 +36,6 @@ public class ModificadorCSV {
         
     }
 
-
     public void ordenarASpirantes(){
 
     }
@@ -61,7 +60,6 @@ public class ModificadorCSV {
     public ArrayList<String[]> prepararCSV(){
         ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
 		String line = "";
-		
 		try{
             BufferedReader br = new BufferedReader(new FileReader(path));
 			while((line = br.readLine())!= null){

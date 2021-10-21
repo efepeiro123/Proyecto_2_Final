@@ -116,7 +116,7 @@ public class Vista{
      //Pedir al usuario los nuevos aspirantes que han tomado los Tests. 
     public String[] nuevoAspirante(){
         String dpi, nombre, numero, correo;
-        String[] informacion = new String[5];
+        String[] informacion = new String[6];
         System.out.println("\nPorfavor ingrese los siguientes datos: ");
         System.out.println("\nDpi: ");
         dpi = sc.nextLine();
@@ -141,9 +141,9 @@ public class Vista{
 
     }
     //Pedir contraseña a los empleadores
-    public String[] preguntarContrasena(){
+    public String preguntarContrasena(){
         System.out.println("\nPorfavor ingrese su contraseña");
-        contra = sc.nextLine();
+        String contra = sc.nextLine();
         return contra;
     }
      //Mensaje de error que se le muestra al usuario.

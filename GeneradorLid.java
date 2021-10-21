@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 interface SistemaGenerarTest{
 
     String[] generarTest();
@@ -23,5 +25,9 @@ public class GeneradorLid extends Sistema implements SistemaGenerarTest{
         }
         
         return obtenerPreguntas;
+    }
+
+    public ArrayList<String> getRespuestasLid(){
+        return respuestasTemp;
     }
 }
