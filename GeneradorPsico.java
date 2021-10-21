@@ -18,4 +18,7 @@ public class GeneradorPsico extends Sistema implements SistemaGenerarTest{
         
         return obtenerPreguntas;
     }
+    public ArrayList<String> getRespuestasPsico (){
+        return respuestasTemp; 
+    }
 }

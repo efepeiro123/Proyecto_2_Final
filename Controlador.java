@@ -25,12 +25,18 @@ public class Controlador {
 	private ModificadorCSV modificador;
     private GeneradorLid GLider;
     private GeneradorPsico GPsico;
+
+    // Calificadores
+    private CalificadorLid CLider;
+    private CalificadorPsico CPsico;
 	
 	// Constructor
 	public Controlador (){
 		vista = new Vista();
         GLider = new GeneradorLid();
         GPsico = new GeneradorPsico();
+        CLider = new CalificadorLid();
+        CPsico = new CalificadorPsico();
         modificador = new ModificadorCSV();
         vista.bienvenida();
         vista.mensajeConcientizacion();
@@ -62,6 +68,9 @@ public class Controlador {
                         
                         vista.mostrarTest(preguntasObtenidas, respuestasUsuario);
 
+                        // Calificar el test Psicologico.
+
+                        
                         //PARTE DE KEVIN
                         //String respuestasFinales = sistema.recibirRespuestas(respuestasUsuario);
                         //datosPersona[4] = respuestasFinales;
