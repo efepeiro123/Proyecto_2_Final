@@ -24,4 +24,7 @@ public class GeneradorLid extends Sistema implements SistemaGenerarTest{
         
         return obtenerPreguntas;
     }
+    public ArrayList<String> getRespuestasLid (){
+        return respuestasTemp; 
+    }
 }
