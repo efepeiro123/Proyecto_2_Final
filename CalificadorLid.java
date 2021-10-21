@@ -1,5 +1,5 @@
 // interfaz del sistema
-interface SistemaGenerarTest{
+interface SistemaCalificador{
 
     String[] recibirRespuestas();
 }
