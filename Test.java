@@ -66,19 +66,27 @@ public class Test{
 
 
     
-    private String[] ListaPsico{
+    private String[] ListaPsico = {
         "\n------------------------------------------------------------------------------------\n1. ¿Animo a los miembros de mi equipo a participar en la toma de decisiones y trato de implementar sus ideas y sugerencia? \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]", 
-        "\n------------------------------------------------------------------------------------\n2. Nada es más importante que completar un objetivo o tarea \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
-        "\n------------------------------------------------------------------------------------\n3. Monitoreo muy de cerca la duraci[on de las tareas para asegurarme que serán completadas a tiempo.",
-        "\n------------------------------------------------------------------------------------\n4. Me gusta ayudar a los demás a realizar nuevas tareas o procedimientos.",
-        "\n------------------------------------------------------------------------------------\n5. Entre más desafiante es la tarea, más lo disfruto.",
-        "\n------------------------------------------------------------------------------------\n6. Animo a mis colaboradores a ser creativos en su trabajo.",
-        "\n------------------------------------------------------------------------------------\n7. Cuando miro una situación o tarea compleja ha sido completada me aseguro de todos los detalles.",
-        "\n------------------------------------------------------------------------------------\n8. Me es fácil llevar a cabo varias tareas complicadas al mismo tiempo.",
-        "\n------------------------------------------------------------------------------------\n9. Disfruto leyendo artículos, libros o revistas acerca de capacitación, liderazgo y  psicología, y luego lo pongo en práctica.",
-
-
-    }
+        "\n------------------------------------------------------------------------------------\n2. Nada es más importante que completar un objetivo o tarea. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n3. Monitoreo muy de cerca la duraci[on de las tareas para asegurarme que serán completadas a tiempo. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n4. Me gusta ayudar a los demás a realizar nuevas tareas o procedimientos. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n5. Entre más desafiante es la tarea, más lo disfruto. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n6. Animo a mis colaboradores a ser creativos en su trabajo. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n7. Cuando miro una situación o tarea compleja ha sido completada me aseguro de todos los detalles. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n8. Me es fácil llevar a cabo varias tareas complicadas al mismo tiempo. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n9. Disfruto leyendo artículos, libros o revistas acerca de capacitación, liderazgo y  psicología, y luego lo pongo en práctica. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n10. Cuando corrijo errores no me preocupan las relaciones personales. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n11. Yo administro mi tiempo con efectividad. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n12. Me gusta explicar los detalles de una tarea compleja a mis empleados. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n13. Dividir grandes proyectos en pequeñas tareas manejables es como una segunda naturaleza para mí. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n14. No hay nada más importante que desarrollar un gran equipo de trabajo. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n15. Me gusta analizar problemas. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n16. Respeto los límites de los demás. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n17. Aconsejar a mis empleados para que mejore su desempeño es mi naturaleza. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]",
+        "\n------------------------------------------------------------------------------------\n18. Disfruto leyendo artículos, libros y revistas acerca de mi profesión y luego implemento los procedimientos que he aprendido. \nNunca [0]\nA veces [1,2 o 3] \nSiempre [4 o 5]"
+    };
+    
     private String[] ListaPsicoRespuestas;
 
 
