@@ -23,6 +23,7 @@ import java.io.FileWriter;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.io.FileNotFoundException;
 
 
@@ -30,11 +31,13 @@ import java.io.FileNotFoundException;
 public class ModificadorCSV {
     private String estadoARchivo;
     private File path = new File("/Proyecto_2_Final/aspirantesNuevo.csv"); //Nombre del archivo CSV el cual contendrá a los aspirantes
+    private File camino = new File("contrasCSV.csv"); // nombre de la variable que se refiere al archivo CSV de las contraseñas.
  
 
     public ModificadorCSV(){
         
     }
+
 
     public void ordenarASpirantes(){
 
@@ -60,6 +63,7 @@ public class ModificadorCSV {
     public ArrayList<String[]> prepararCSV(){
         ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
 		String line = "";
+		
 		try{
             BufferedReader br = new BufferedReader(new FileReader(path));
 			while((line = br.readLine())!= null){
@@ -108,6 +112,26 @@ public class ModificadorCSV {
 
     //     return variable; //Esta variable tendría los aspirantes a ver.
     // }
-
-
+    
+    //Metodo para preparar las contrasellas de los empleadores
+         
+    public ArrayList<String[]> prepararContrasenas() {
+        ArrayList<String[]> contrase = new ArrayList<String[]>();
+		String line = "";
+		try{
+            BufferedReader br = new BufferedReader(new FileReader(camino));
+			while((line = br.readLine())!= null){
+				String[] values = line.split(",");
+				contrase.add(values);
+			}
+            br.close();
+			
+		}catch(FileNotFoundException e){
+			//e.printStackTrace();
+		}catch(IOException e){
+			//e.printStackTrace();
+		}
+		
+        return contrase;
+    }
 }
