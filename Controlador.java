@@ -115,28 +115,26 @@ public class Controlador {
             break;									                					                
 					
                 case "2":
-                ArrayList<String[]> contras; 
-                contras = modificador.prepararContrasenas();
+                ArrayList<String[]> contras = modificador.prepararContrasenas();
                 String con = vista.preguntarContrasena();
-                vista.verInformacion("\nBienvenido");
-                vista.verInformacion("Tamaño: " +contras.size());
                 int a = 0;
-                System.out.println(contras.get(1)[0]);
                 for(int i = 0; i<contras.size();i++){
+                    System.out.println(contras.get(i)[0]);
+                    System.out.println(contras.get(i)[0].equals(con));
                     if(contras.get(i)[0].equals(con)){
-                        System.out.println("Bienvenido");
+                        
+                        vista.verInformacion("Bienvenido!\n");
                         a=1;
-                     }else{
-                        System.out.println("Contrasena incorrecta");
+                        i = contras.size()+1;
                      }
                  }
-                    String opcionEmpleador = vista.menuEmpleadores();
-                    tipoPersona = "Empleador"; 
 
                     /**
                     * Si selecciona la opcion 1 entonces vera los resultados 
                     */
                     if(a==1){
+                    String opcionEmpleador = vista.menuEmpleadores();
+                    tipoPersona = "Empleador"; 
                     if(opcionEmpleador.equals("1")){
                         ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
                         aspirantesarreglo = modificador.prepararCSV();
@@ -159,11 +157,14 @@ public class Controlador {
                         vista.salir(); //mensaje de despedida
                         terminar = true;
                     }
-                }
+                
 
                     else{
                         vista.invalido();
                     }
+                }else{
+                    vista.verInformacion("Contrasena incorrecta");
+                }
 
                 break;	
             
