@@ -37,6 +37,13 @@ public class Controlador {
         sistemaGeneradorLid = new GeneradorLid();
         sistemaGeneradorPsico = new GeneradorPsico();
 	    modificador = new ModificadorCSV();
+
+        // Determinacion de los metodos de cada clase.   
+        vista.DivisionAsteriscos();
+        vista.bienvenida();
+        vista.mensajeConcientizacion();
+        vista.DivisionAsteriscos();
+        
 	}
 
      /**
@@ -77,6 +84,7 @@ public class Controlador {
                     
 
                     datosPersona[4] = respuestasFinalesLid;
+                    System.out.println(respuestasFinalesLid);
                     vista.verInformacion("\nHa completado el examen de habilidades de liderazgo. En este momento realizara el examen psicologico.\n");
                     //modificador.agregarAspirante(datosPersona);
                     
@@ -94,7 +102,7 @@ public class Controlador {
                     System.out.println(respuestasFinalesPsico);
 
                     datosPersona[5] = respuestasFinalesPsico;
-
+                    System.out.println(respuestasFinalesPsico);
                     modificador.agregarAspirante(datosPersona);
                     vista.verInformacion("\nHa finalizado el examen psicologico. Agradecemos mucho su participacion. Sera contactado por medio de la informacion de contacto brindada en caso de ser seleccionado.\n");
 

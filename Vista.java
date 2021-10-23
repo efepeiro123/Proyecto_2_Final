@@ -51,9 +51,8 @@ public class Vista{
 		String op;
         System.out.println("\nAspirante");
         System.out.println("Ingrese el numero de la opcion que desea realizar\n");
-        System.out.println("1. Realizar test psicologico");
-        System.out.println("2. Realizar test lider");
-        System.out.println("3. Salir\n");
+        System.out.println("1. Realizar test Lider");
+        System.out.println("2. Salir\n");
 
 		op = sc.nextLine();
 		return op;
