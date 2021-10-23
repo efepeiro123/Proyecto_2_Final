@@ -73,8 +73,8 @@ public class Test{
         "\n------------------------------------------------------------------------------------\n4.Cuando me propongo una meta ¿Me aseguro de cumplirlas?. \n\nA) Si \nB) No \n\n", //A
         "\n------------------------------------------------------------------------------------\n5. Es mejor ser cauto y esperar poco que optimista y esperar siempre el éxito. \n\nA) Afirmativo\nB) Falso \n\n", //A
         "\n------------------------------------------------------------------------------------\n6. Cuando se complica el trabajo. \n\nA) Busco soluciones lo antes posible. \nB) Intentó organizar todo para evitar que aparezcan.\nC) Me estreso y busco que otra persona lo solucione. \n\n", //A
-        "\n------------------------------------------------------------------------------------\n7. Los trabajos o tareas prefiero. \n\nA)Trabajarlas en grupo. \nB) Trabajar solo\nC)Trabajar partes solo y en grupo. \n\n", //C
-        "\n------------------------------------------------------------------------------------\n8. Prefiero planear las cosas y no tener prisas o imprevistos. \n\nA) Afirmativo\nB)Falso \n\n", //A
+        "\n------------------------------------------------------------------------------------\n7. Los trabajos o tareas prefiero. \n\nA)Trabajarlas en grupo. \nB)Trabajar solo\nC)Trabajar partes solo y en grupo. \n\n", //C
+        "\n------------------------------------------------------------------------------------\n8. Prefiero planear las cosas y no tener prisas o imprevistos. \n\nA) Afirmativo\nB) Falso \n\n", //A
         "\n------------------------------------------------------------------------------------\n9. Me considero una persona entusiasta. \n\nA)Falso\nB) Verdadero\n\n", //B
         "\n------------------------------------------------------------------------------------\n10. ¿Me resulta embarazoso que me dediquen elogios o cumplidos? \n\nA) Si \nB) Término medio \nC) No \n\n", // C
         "\n------------------------------------------------------------------------------------\n11. ¿Me gusta tomar parte activa en las tareas sociales, trabajos de comité, etc? \n\nA) Si \nB) Término medio \nC) No \n\n", // A

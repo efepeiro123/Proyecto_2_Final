@@ -51,7 +51,7 @@ public class Vista{
 		String op;
         System.out.println("\nAspirante");
         System.out.println("Ingrese el numero de la opcion que desea realizar\n");
-        System.out.println("1. Realizar test Lider");
+        System.out.println("1. Realizar examenes");
         System.out.println("2. Salir\n");
 
 		op = sc.nextLine();
@@ -75,7 +75,7 @@ public class Vista{
     public void mostrarListaResultados(ArrayList<String[]> aspirantesarreglo){
         System.out.println("Los resultados de los aspirantes son: ");
         for(int asp =0;asp<aspirantesarreglo.size();asp++){
-             System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación: " +aspirantesarreglo.get(asp)[4]);
+             System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuación de psicologico: " +aspirantesarreglo.get(asp)[5]);
         }
     }
     //Muestra las preguntas instanciadas en Sistema de la clase TestLider.
