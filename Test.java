@@ -68,13 +68,13 @@ public class Test{
     
     private String[] ListaPsico = {
         "\n------------------------------------------------------------------------------------\n1. Poseo la energía suficiente para enfrentarme a todos mis problemas\n\nA) Siempre\nB) Frecuentemente\nC) Raras veces\n\n", //A
-        "\n------------------------------------------------------------------------------------\n2. Evito criticar a la gente y sus ideas. \n\nA) Si\nB) Algunas veces\n C) No\n\n", //B
+        "\n------------------------------------------------------------------------------------\n2. Evito criticar a la gente y sus ideas. \n\nA) Si\nB) Algunas veces\nC) No\n\n", //B
         "\n------------------------------------------------------------------------------------\n3. He pertenecido a algún equipo deportivo o similar. \n\nA) Si \nB) No \n\n", //A
         "\n------------------------------------------------------------------------------------\n4.Cuando me propongo una meta ¿Me aseguro de cumplirlas?. \n\nA) Si \nB) No \n\n", //A
         "\n------------------------------------------------------------------------------------\n5. Es mejor ser cauto y esperar poco que optimista y esperar siempre el éxito. \n\nA) Afirmativo\nB) Falso \n\n", //A
-        "\n------------------------------------------------------------------------------------\n6. Cuando se complica el trabajo. \n\nA) Busco soluciones lo antes posible. \nB) Intentó organizar todo para evitar que aparezcan.\n C) Me estreso y busco que otra persona lo solucione. \n\n", //A
+        "\n------------------------------------------------------------------------------------\n6. Cuando se complica el trabajo. \n\nA) Busco soluciones lo antes posible. \nB) Intentó organizar todo para evitar que aparezcan.\nC) Me estreso y busco que otra persona lo solucione. \n\n", //A
         "\n------------------------------------------------------------------------------------\n7. Los trabajos o tareas prefiero. \n\nA)Trabajarlas en grupo. \nB) Trabajar solo\nC)Trabajar partes solo y en grupo. \n\n", //C
-        "\n------------------------------------------------------------------------------------\n8. Prefiero planear las cosas y no tener prisas o imprevistos. \n\nA) Afirmativo\nB) \n\n", //A
+        "\n------------------------------------------------------------------------------------\n8. Prefiero planear las cosas y no tener prisas o imprevistos. \n\nA) Afirmativo\nB)Falso \n\n", //A
         "\n------------------------------------------------------------------------------------\n9. Me considero una persona entusiasta. \n\nA)Falso\nB) Verdadero\n\n", //B
         "\n------------------------------------------------------------------------------------\n10. ¿Me resulta embarazoso que me dediquen elogios o cumplidos? \n\nA) Si \nB) Término medio \nC) No \n\n", // C
         "\n------------------------------------------------------------------------------------\n11. ¿Me gusta tomar parte activa en las tareas sociales, trabajos de comité, etc? \n\nA) Si \nB) Término medio \nC) No \n\n", // A
@@ -82,7 +82,7 @@ public class Test{
         "\n------------------------------------------------------------------------------------\n13. Siempre soy capaz de controlar perfectamente la expresión de mis sentimientos:  \n\nA) Si \nB) A veces\nC) No \n\n", // A
         "\n------------------------------------------------------------------------------------\n14. Algunas personas parecen ignorarme o evitarme, aunque no sé por qué:  \n\nA) Verdadero \nB) No estoy seguro \nC) Falso \n\n", // C
         "\n------------------------------------------------------------------------------------\n15. Aunque no sea en un grupo mixto de mujeres y hombres, me disgusta que se use un lenguaje obsceno.  \n\nA) Verdadero \nB) No estoy seguro \nC) Falso \n\n", // A
-        "\n------------------------------------------------------------------------------------\n16. Me resulta fácil mezclarme con la gente en una reunión social:  \n\nA) Verdadero \nB) No estoy seguro ○2nC) Falso \n\n", // A
+        "\n------------------------------------------------------------------------------------\n16. Me resulta fácil mezclarme con la gente en una reunión social:  \n\nA) Verdadero \nB) No estoy seguro \nC) Falso \n\n", // A
         "\n------------------------------------------------------------------------------------\n17. Sería más interesante ser:  \n\nA) Orientador vocacional  \nB) No estoy seguro \nC) Directivo \n\n", // C
         "\n------------------------------------------------------------------------------------\n18. Me disgusta el modo con que algunas personas se fijan en otras en la calle o en las tiendas:  \n\nA) Si  \nB) No estoy seguro \nC) No \n\n", // A
         "\n------------------------------------------------------------------------------------\n19. Me niego a admitir sugerencias bien intencionadas de los demás. aunque sé que no debería hacerlo:   \n\nA) Algunas veces  \nB) Casi nunca \nC) Nunca \n\n", // C

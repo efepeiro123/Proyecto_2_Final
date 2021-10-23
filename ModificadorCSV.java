@@ -94,7 +94,7 @@ public class ModificadorCSV {
             FileWriter fw = new FileWriter(path);
             BufferedWriter bw = new BufferedWriter(fw);
             for(int o=0;o<aspirantesArray.size();o++){
-                bw.write(aspirantesArray.get(o)[0]+","+aspirantesArray.get(o)[1]+","+aspirantesArray.get(o)[2]+","+aspirantesArray.get(o)[3]+","+aspirantesArray.get(o)[4]);
+                bw.write(aspirantesArray.get(o)[0]+","+aspirantesArray.get(o)[1]+","+aspirantesArray.get(o)[2]+","+aspirantesArray.get(o)[3]+","+aspirantesArray.get(o)[4]+","+aspirantesArray.get(o)[5]);
                 if(o < (aspirantesArray.size()-1)){
                     bw.newLine();
                 }
