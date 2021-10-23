@@ -89,7 +89,29 @@ public class Test{
         "\n------------------------------------------------------------------------------------\n.20Me considero a mí mismo como una persona muy abierta y sociable:  \n\nA) Si  \nB) Término medio \nC) No \n\n", // A
     };
     
-    private String[] ListaPsicoRespuestas;
+    private String[] ListaPsicoRespuestas = {
+        "A", //Pregunta 1 
+        "B", //Pregunta 2
+        "A", //Pregunta 3
+        "A", //Pregunta 4
+        "A", //Pregunta 5
+        "A", //Pregunta 6
+        "C", //Pregunta 7
+        "A", //Pregunta 8
+        "B", //Pregunta 9
+        "C", //Pregunta 10
+        "A", //Pregunta 11
+        "A", //Pregunta 12
+        "A", //Pregunta 13
+        "C", //Pregunta 14
+        "A", //Pregunta 15
+        "A", //Pregunta 16
+        "C", //Pregunta 17
+        "A", //Pregunta 18
+        "C", //Pregunta 19
+        "A", //Pregunta 20
+
+    };
 
 
     //Metodos getters____________________________________________________
