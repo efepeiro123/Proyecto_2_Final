@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 interface SistemaGenerarTest{
@@ -16,14 +17,20 @@ public class GeneradorLid extends Sistema implements SistemaGenerarTest{
         respuestas = test.getListaLidRespuestas();
         int max = preguntas.length - 1; 
         int min = 0;
+        ArrayList<Integer> repetidos = new ArrayList<Integer>();
+        repetidos.clear();
         int preguntasSolicitadas = 10;
         String [] obtenerPreguntas = new String[preguntasSolicitadas];
         for (int i = 0; i < preguntasSolicitadas; i++) {
-            int seleccionador = rand.nextInt((max - min ) + 1) + min; 
-            obtenerPreguntas[i] = preguntas[seleccionador];
-            respuestasTemp.add(respuestas[seleccionador]);
+            Integer seleccionador = rand.nextInt((max - min ) + 1) + min;
+            if(repetidos.contains(seleccionador)==false){
+                repetidos.add(seleccionador); 
+                obtenerPreguntas[i] = preguntas[seleccionador];
+                respuestasTemp.add(respuestas[seleccionador]);
+           }else{
+               i--;
+            }
         }
-        
         return obtenerPreguntas;
     }
 

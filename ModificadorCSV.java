@@ -101,8 +101,8 @@ public class ModificadorCSV {
             }
             bw.close();
         }catch(IOException e){
-            System.out.println("");
-            e.printStackTrace();
+            //System.out.println("");
+            //e.printStackTrace();
         }
 
     }

@@ -86,7 +86,7 @@ public class Test{
         "\n------------------------------------------------------------------------------------\n17. Sería más interesante ser:  \n\nA) Orientador vocacional  \nB) No estoy seguro \nC) Directivo \n\n", // C
         "\n------------------------------------------------------------------------------------\n18. Me disgusta el modo con que algunas personas se fijan en otras en la calle o en las tiendas:  \n\nA) Si  \nB) No estoy seguro \nC) No \n\n", // A
         "\n------------------------------------------------------------------------------------\n19. Me niego a admitir sugerencias bien intencionadas de los demás. aunque sé que no debería hacerlo:   \n\nA) Algunas veces  \nB) Casi nunca \nC) Nunca \n\n", // C
-        "\n------------------------------------------------------------------------------------\n.20Me considero a mí mismo como una persona muy abierta y sociable:  \n\nA) Si  \nB) Término medio \nC) No \n\n", // A
+        "\n------------------------------------------------------------------------------------\n20. Me considero a mí mismo como una persona muy abierta y sociable:  \n\nA) Si  \nB) Término medio \nC) No \n\n", // A
     };
     
     private String[] ListaPsicoRespuestas = {
