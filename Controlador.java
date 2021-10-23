@@ -122,6 +122,7 @@ public class Controlador {
             break;									                					                
 					
                 case "2":
+                tipoPersona = "Empleador";
                 ArrayList<String[]> contras = modificador.prepararContrasenas();
                 String con = vista.preguntarContrasena();
                 int a = 0;

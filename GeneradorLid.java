@@ -1,6 +1,25 @@
-import java.lang.reflect.Array;
+/**
+ * <h1> Proyecto Integrador -  sistema de contratación 
+ * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h3> GeneradorPsico  </h2>
+ * 
+ * 
+ * Descripción: Esta clase genera el test de liderazgo y hereda de la clase Sistema
+ * 
+ * 
+ * 
+ * @author Grupo 4 
+ * @since3 3-octubre-2021
+ * @version 1.0
+ * 
+ */
+
+/**
+* Librerias
+*  */
 import java.util.ArrayList;
 
+//INTERFAZ
 interface SistemaGenerarTest{
 
     String[] generarTest();
