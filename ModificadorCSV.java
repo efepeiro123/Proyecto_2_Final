@@ -138,7 +138,6 @@ public class ModificadorCSV {
     }
 
     public ArrayList<String[]> promediosOrdenados(int escogidos){
-        ArrayList<String[]> aspirantesArreglo = new ArrayList<String[]>();
         ArrayList<String> promediosOrdenados = new ArrayList<String>();
         ArrayList<String[]> aspirantesOrdenados = new ArrayList<String[]>();
 
