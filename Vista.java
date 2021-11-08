@@ -79,7 +79,7 @@ public class Vista{
     public void mostrarListaResultados(ArrayList<String[]> aspirantesarreglo){
         System.out.println("Los resultados de los aspirantes son: ");
         for(int asp =0;asp<aspirantesarreglo.size();asp++){
-             System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuación de psicologico: " +aspirantesarreglo.get(asp)[5]);
+             System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuación de psicologico: " +aspirantesarreglo.get(asp)[5]+ " ---- Promedio de puntuación: " +aspirantesarreglo.get(asp)[6]);
         }
     }
     //Muestra las preguntas instanciadas en Sistema de la clase TestLider.
@@ -168,4 +168,12 @@ public class Vista{
         System.out.println("\nGracias por enviar su CV :) ");
         return sc.nextLine(); 
     }	 
+
+
+    public int preguntarSeleccionados(){
+        System.out.println("Cuanto aspirantes desea ver?: ");
+        int s = sc.nextInt();
+
+        return s;
+    }
 }

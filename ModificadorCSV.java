@@ -24,6 +24,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.io.FileNotFoundException;
 
 
@@ -94,7 +96,7 @@ public class ModificadorCSV {
             FileWriter fw = new FileWriter(path);
             BufferedWriter bw = new BufferedWriter(fw);
             for(int o=0;o<aspirantesArray.size();o++){
-                bw.write(aspirantesArray.get(o)[0]+","+aspirantesArray.get(o)[1]+","+aspirantesArray.get(o)[2]+","+aspirantesArray.get(o)[3]+","+aspirantesArray.get(o)[4]+","+aspirantesArray.get(o)[5]);
+                bw.write(aspirantesArray.get(o)[0]+","+aspirantesArray.get(o)[1]+","+aspirantesArray.get(o)[2]+","+aspirantesArray.get(o)[3]+","+aspirantesArray.get(o)[4]+","+aspirantesArray.get(o)[5]+","+aspirantesArray.get(o)[6]);
                 if(o < (aspirantesArray.size()-1)){
                     bw.newLine();
                 }
@@ -133,5 +135,38 @@ public class ModificadorCSV {
 		}
 		
         return contrase;
+    }
+
+    public ArrayList<String[]> promediosOrdenados(){
+        ArrayList<String[]> aspirantesArreglo = new ArrayList<String[]>();
+        ArrayList<String> promediosOrdenados = new ArrayList<String>();
+        ArrayList<String[]> aspirantesOrdenados = new ArrayList<String[]>();
+
+        aspirantesArreglo = prepararCSV();
+
+        for(int p = 0;p < aspirantesArreglo.size();p++){
+            promediosOrdenados.add(aspirantesArreglo.get(p)[6]);
+        }
+
+        Double[] a = new Double[promediosOrdenados.size()];
+        for(int t = 0;t<promediosOrdenados.size();t++){
+			a[t] = Double.parseDouble(promediosOrdenados.get(t));
+		}
+
+        
+
+        Arrays.sort(a, Collections.reverseOrder());
+        
+        for(int k = 0; k<a.length;k++){
+			for(int g = 0;g<aspirantesArreglo.size();g++){
+				if(Double.toString(a[k]).equals(aspirantesArreglo.get(g)[6])){
+					aspirantesOrdenados.add(aspirantesArreglo.get(g));
+                   ;
+				}
+			}
+		}
+
+
+    return aspirantesOrdenados;
     }
 }
