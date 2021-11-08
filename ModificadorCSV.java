@@ -34,7 +34,7 @@ public class ModificadorCSV {
     private String estadoARchivo;
     private File path = new File("/Proyecto_2_Final/aspirantesNuevo.csv"); //Nombre del archivo CSV el cual contendrá a los aspirantes
     private File camino = new File("contrasCSV.csv"); // nombre de la variable que se refiere al archivo CSV de las contraseñas.
- 
+    private ArrayList<String[]> aspirantesArreglo = new ArrayList<String[]>();
 
     public ModificadorCSV(){
         
@@ -60,17 +60,17 @@ public class ModificadorCSV {
     }
     /**
      * Se encarga de guardar los datos por fila en un arraylist el cual luego será utilizado por guardar los datos del nuevo aspirante.
-     * @return aspirantesarreglo Es el ArrayList que guarda los datos de las filas del CSV.
+     * @return aspirantesArreglo Es el ArrayList que guarda los datos de las filas del CSV.
      */
-    public ArrayList<String[]> prepararCSV(){
-        ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
+    public void prepararCSV(){
+        
 		String line = "";
 		
 		try{
             BufferedReader br = new BufferedReader(new FileReader(path));
 			while((line = br.readLine())!= null){
 				String[] values = line.split(",");
-				aspirantesarreglo.add(values);
+				aspirantesArreglo.add(values);
 			}
             br.close();
 			
@@ -79,7 +79,7 @@ public class ModificadorCSV {
 		}catch(IOException e){
 			//e.printStackTrace();
 		}
-        return aspirantesarreglo;
+      
     }
     
 
@@ -90,7 +90,7 @@ public class ModificadorCSV {
     
     public void agregarAspirante(String[] datosPersona){
         ArrayList<String[]> aspirantesArray = new ArrayList<String[]>();
-        aspirantesArray = prepararCSV();
+        
         aspirantesArray.add(datosPersona);
         try{
             FileWriter fw = new FileWriter(path);
@@ -137,12 +137,12 @@ public class ModificadorCSV {
         return contrase;
     }
 
-    public ArrayList<String[]> promediosOrdenados(){
+    public ArrayList<String[]> promediosOrdenados(int escogidos){
         ArrayList<String[]> aspirantesArreglo = new ArrayList<String[]>();
         ArrayList<String> promediosOrdenados = new ArrayList<String>();
         ArrayList<String[]> aspirantesOrdenados = new ArrayList<String[]>();
 
-        aspirantesArreglo = prepararCSV();
+       
 
         for(int p = 0;p < aspirantesArreglo.size();p++){
             promediosOrdenados.add(aspirantesArreglo.get(p)[6]);
@@ -157,7 +157,7 @@ public class ModificadorCSV {
 
         Arrays.sort(a, Collections.reverseOrder());
         
-        for(int k = 0; k<a.length;k++){
+        for(int k = 0; k<escogidos;k++){
 			for(int g = 0;g<aspirantesArreglo.size();g++){
 				if(Double.toString(a[k]).equals(aspirantesArreglo.get(g)[6])){
 					aspirantesOrdenados.add(aspirantesArreglo.get(g));
@@ -168,5 +168,13 @@ public class ModificadorCSV {
 
 
     return aspirantesOrdenados;
+    }
+
+    public int getSizeAspirantes(){
+        return aspirantesArreglo.size();
+    }
+
+    public ArrayList<String[]> getAspirantesArreglo() {
+        return aspirantesArreglo;
     }
 }

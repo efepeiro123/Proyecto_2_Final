@@ -144,7 +144,7 @@ public class Controlador {
                     tipoPersona = "Empleador"; 
                     if(opcionEmpleador.equals("1")){
                         ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
-                        aspirantesarreglo = modificador.prepararCSV();
+                        aspirantesarreglo = modificador.getAspirantesArreglo();
                         vista.DivisionAsteriscos();
                         vista.mostrarListaResultados(aspirantesarreglo);
                         vista.DivisionAsteriscos();
@@ -154,8 +154,9 @@ public class Controlador {
                     * Si selecciona la opcion 2 entonces podra pedir cuantos aspirantes quiere escoger
                     */
                     else if(opcionEmpleador.equals("2")){
+                        int seleccion = vista.preguntarSeleccionados(modificador.getSizeAspirantes());
 
-                        ArrayList<String[]> orden = modificador.promediosOrdenados();
+                        ArrayList<String[]> orden = modificador.promediosOrdenados(seleccion);
 
                         vista.mostrarListaResultados(orden);
                     }

@@ -67,7 +67,9 @@ public class Vista{
         System.out.println("\nEmpleador");   
         System.out.println("\n1. Ver resultados");
         System.out.println("\n2. Determinar Top de Aspirantes");
-        System.out.println("\n3. Salir");
+        System.out.println("\n3. Limpiar el CSV");
+        System.out.println("\n4. Salir");
+        
           
 
 		return sc.nextLine();
@@ -170,10 +172,22 @@ public class Vista{
     }	 
 
 
-    public int preguntarSeleccionados(){
-        System.out.println("Cuanto aspirantes desea ver?: ");
-        int s = sc.nextInt();
-
+    public int preguntarSeleccionados(int tamaño){
+        System.out.println("¿Cuantos aspirantes desea ver?: ");
+        int s = 0;
+        int n = 1;
+        while(n != 0){
+            s = sc.nextInt();
+            if(s == 0){
+                System.out.println("Debe ingresar un numero mayor que 0");
+            }
+            else if(s > tamaño){
+                System.out.println("El numero que ingreso es mayor al numero de aspirantes existentes");
+            }
+            else{
+                n = 0;
+            }
+        }
         return s;
     }
 }
