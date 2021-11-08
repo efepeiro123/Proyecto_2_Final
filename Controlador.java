@@ -50,6 +50,7 @@ public class Controlador {
      * M�todo menu para tener el control del programa
      */
 	public void menu(){
+        modificador.prepararCSV();
         String tipoPersona = "";  
         boolean terminar = false;
 
