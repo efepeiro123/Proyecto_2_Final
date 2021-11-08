@@ -101,6 +101,7 @@ public class Controlador {
                     System.out.println(respuestasFinalesPsico);
 
                     datosPersona[5] = respuestasFinalesPsico;
+                    datosPersona[6] = (respuestasFinalesPsico.parseInt() + respuestasFinalesLid.parseInt())/2; // Promedio de las notas 
                     
                     modificador.agregarAspirante(datosPersona);
                     vista.verInformacion("\nHa finalizado el examen psicologico. Agradecemos mucho su participacion. Sera contactado por medio de la informacion de contacto brindada en caso de ser seleccionado.\n");
