@@ -31,8 +31,12 @@ public class Vista{
     }
 
     public void mensajeConcientizacion(){
-        System.out.println("\nLa igualdad es un derecho por el que se sigue luchando hoy en dia, por favor tener");
-        System.out.println("en cuenta tomar una decision imparcial con respecto al genero del aspirante.\n"); 
+        System.out.println("\nLa igualdad laboral es el brindarle las mismas condiciones de trabajo tanto a");
+        System.out.println("\nhombres como mujeres sin importar su genero, religión, etnia etcetera. La lucha");
+        System.out.println("contra la desigualdad con respecto al sexo de los trabajadores es una batalla que");
+        System.out.println("sigue en pie y esta igualdad es un derecho por el que se sigue luchando hoy en dia,");
+        System.out.println("por favor tener en cuenta tomar una decision imparcial con respecto");
+        System.out.println("al genero del aspirante.\n"); 
     }
     //Cierra las funciones del programa y muestra mensaje de despedida.
     public void salir(){
