@@ -166,6 +166,8 @@ public class Controlador {
                     * Si selecciona la opcion 3 entonces se termina el programa
                     */
                     else if(opcionEmpleador.equals("3")){
+                        modificador.limpiarCompleto();
+                    }else if(opcionEmpleador.equals("4")){
                         vista.salir(); //mensaje de despedida
                         terminar = true;
                     }

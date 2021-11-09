@@ -16,6 +16,9 @@
  */
  
 import java.util.Scanner;
+
+import javax.swing.AbstractSpinnerModel;
+
 import java.util.ArrayList;
 
 public class Vista{
@@ -79,9 +82,14 @@ public class Vista{
  * @param aspirantesarreglo es el arreglo que contiene los datos de cada aspirante.
  */
     public void mostrarListaResultados(ArrayList<String[]> aspirantesarreglo){
+
         System.out.println("Los resultados de los aspirantes son: ");
+        
         for(int asp =0;asp<aspirantesarreglo.size();asp++){
-             System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuación de psicologico: " +aspirantesarreglo.get(asp)[5]+ " ---- Promedio de puntuación: " +aspirantesarreglo.get(asp)[6]);
+            if(aspirantesarreglo.get(asp)[0].equals("null")){ 
+            }else{    
+                System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuación de psicologico: " +aspirantesarreglo.get(asp)[5]+ " ---- Promedio de puntuación: " +aspirantesarreglo.get(asp)[6]);
+            }
         }
     }
     //Muestra las preguntas instanciadas en Sistema de la clase TestLider.

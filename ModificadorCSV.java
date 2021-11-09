@@ -28,11 +28,10 @@ import java.util.Collection;
 import java.util.Collections;
 import java.io.FileNotFoundException;
 
-
 //La clase contendrá los archivos CSV de los aspirantes y contraseñas de los empleadores.
 public class ModificadorCSV {
     private String estadoARchivo;
-    private File path = new File("/Proyecto_2_Final/aspirantesNuevo.csv"); //Nombre del archivo CSV el cual contendrá a los aspirantes
+    private File path = new File("aspirantesNuevo.csv"); //Nombre del archivo CSV el cual contendrá a los aspirantes
     private File camino = new File("contrasCSV.csv"); // nombre de la variable que se refiere al archivo CSV de las contraseñas.
     private ArrayList<String[]> aspirantesArreglo = new ArrayList<String[]>();
 
@@ -41,23 +40,30 @@ public class ModificadorCSV {
     }
 
 
-    public void ordenarASpirantes(){
-
-    }
-
-    // public boolean VerificarContrasenia(){
-
-    //     return variable; //Esta variable sería la booleana de retorno
-    // }
-
-    public void limpiarNoAceptados(int aceptados){
-
-        
-    }
+    
 
     public void limpiarCompleto(){
+        String[] remp = new String[7];
+        for(int p = 0; p< aspirantesArreglo.size();p++){
+            aspirantesArreglo.set(p, remp);
+        }
 
+        try{
+            FileWriter fw = new FileWriter(path);
+            BufferedWriter bw = new BufferedWriter(fw);
+            for(int o=0;o<aspirantesArreglo.size();o++){
+                bw.write(""+","+""+","+""+","+""+","+""+","+""+","+"");
+                if(o < (aspirantesArreglo.size()-1)){
+                    bw.newLine();
+                }
+            }
+            bw.close();
+        }catch(IOException e){
+            //System.out.println("");
+            //e.printStackTrace();
+        }
     }
+
     /**
      * Se encarga de guardar los datos por fila en un arraylist el cual luego será utilizado por guardar los datos del nuevo aspirante.
      * @return aspirantesArreglo Es el ArrayList que guarda los datos de las filas del CSV.
@@ -90,7 +96,7 @@ public class ModificadorCSV {
     
     public void agregarAspirante(String[] datosPersona){
         ArrayList<String[]> aspirantesArray = new ArrayList<String[]>();
-        
+        aspirantesArray = aspirantesArreglo;
         aspirantesArray.add(datosPersona);
         try{
             FileWriter fw = new FileWriter(path);
