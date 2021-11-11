@@ -208,10 +208,19 @@ public class Vista{
             si = sc.nextLine();
             if(si.equals("s")||si.equals("S")){
                 System.out.println("Gracias por haberlo enviado, puede continuar");
+                no = 0;
             }
             else{
                 System.out.println("Por favor envie su curriculum al correo asignado");
             }
         }
+    } 
+
+    public void mensajeConcientizacionAspirante (){   // LINEA 63
+        System.out.println("Los mas valioso de ustedes es su honestidad y disciplina, no se preocupe por los demás factores.");
+    } 
+    
+    public void mensajeConcientizacionEmpleador(){  // LINEA 127
+        System.out.println("Lo más importante de un aspirante es su desempeño profesional, no se preocupe por nimiedades.");
     } 
 }

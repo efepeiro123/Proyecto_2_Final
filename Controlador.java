@@ -60,6 +60,7 @@ public class Controlador {
 
             
                 case "1":
+                vista.mensajeConcientizacionAspirante();
                 vista.pedirCurriculum();
                 vista.DivisionAsteriscos();
                 String opcionAspirante = vista.menuAspi();
@@ -125,6 +126,7 @@ public class Controlador {
             break;									                					                
 					
                 case "2":
+                vista.mensajeConcientizacionEmpleador();
                 tipoPersona = "Empleador";
                 ArrayList<String[]> contras = modificador.prepararContrasenas();
                 String con = vista.preguntarContrasena();
