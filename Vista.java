@@ -198,4 +198,20 @@ public class Vista{
         }
         return s;
     }
+//Pedir curriculum a los aspirantes
+    public void  pedirCurriculum(){
+        System.out.println("El correo asignado para enviar el curriculum es: Contrataciones@gmail.com");
+        System.out.println("¿Ya ha enviado su curriculum al correo asignado? ingrese s para si o n para no :)");
+        String si = "";
+        int no = 1;
+        while(no != 0){
+            si = sc.nextLine();
+            if(si.equals("s")||si.equals("S")){
+                System.out.println("Gracias por haberlo enviado, puede continuar");
+            }
+            else{
+                System.out.println("Por favor envie su curriculum al correo asignado");
+            }
+        }
+    } 
 }

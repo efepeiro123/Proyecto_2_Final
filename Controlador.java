@@ -60,6 +60,7 @@ public class Controlador {
 
             
                 case "1":
+                vista.pedirCurriculum();
                 vista.DivisionAsteriscos();
                 String opcionAspirante = vista.menuAspi();
                 tipoPersona = "Aspirante"; 
