@@ -86,7 +86,7 @@ public class Vista{
         System.out.println("Los resultados de los aspirantes son: ");
         
         for(int asp =0;asp<aspirantesarreglo.size();asp++){
-            if(aspirantesarreglo.get(asp)[0].equals("null")){ 
+            if(aspirantesarreglo.get(asp)[0]== null||aspirantesarreglo.get(asp)[0].equals("null")){ 
             }else{    
                 System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuación de psicologico: " +aspirantesarreglo.get(asp)[5]+ " ---- Promedio de puntuación: " +aspirantesarreglo.get(asp)[6]);
             }

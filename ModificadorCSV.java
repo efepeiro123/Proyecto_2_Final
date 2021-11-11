@@ -150,12 +150,19 @@ public class ModificadorCSV {
        
 
         for(int p = 0;p < aspirantesArreglo.size();p++){
-            promediosOrdenados.add(aspirantesArreglo.get(p)[6]);
+            if(aspirantesArreglo.get(p)[6] == null||aspirantesArreglo.get(p)[6].equals("null")){
+            }
+            else{
+                promediosOrdenados.add(aspirantesArreglo.get(p)[6]);
+            }
         }
 
         Double[] a = new Double[promediosOrdenados.size()];
         for(int t = 0;t<promediosOrdenados.size();t++){
-			a[t] = Double.parseDouble(promediosOrdenados.get(t));
+            if(promediosOrdenados.get(t).equals("null")){
+            }else{
+                a[t] = Double.parseDouble(promediosOrdenados.get(t));
+            }
 		}
 
         
