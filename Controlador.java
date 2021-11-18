@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 
 /**
- * <h1> Proyecto Integrador -  sistema de contratación 
- * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h1> Proyecto Integrador -  sistema de contratacion 
+ * <h2> Programacion Orientada a Objetos seccion 41</h1>
  * <h3> Controlador (Clase de tipo controlador) </h2>
  * 
  * 
- * Descripción: Esta clase se comunicará con el modelo (Sistema, modificadorCSV, test) 
- * y se comunicará con la clase Vista. Como su nombre lo dice controlará el programa
- *  encargándose de que vista y modelo se comuniquen.
+ * Descripcion: Esta clase se comunicara con el modelo (Sistema, modificadorCSV, test) 
+ * y se comunicara con la clase Vista. Como su nombre lo dice controlara el programa
+ *  encargandose de que vista y modelo se comuniquen.
  * 
  * 
  * @author Grupo 4 
@@ -72,7 +72,7 @@ public class Controlador {
                 if(opcionAspirante.equals("1")){
                 
                     //****************Lid ******************************/
-                    vista.verInformacion("En este momento realizará el examen de habilidades de liderazgo.\n");
+                    vista.verInformacion("En este momento realizara el examen de habilidades de liderazgo.\n");
                     vista.DivisionAsteriscos();
                     String [] preguntasObtenidasLid = sistemaGeneradorLid.generarTest();     // Llamado al arreglo con las preguntas del Test Lider. 
                     String [] respuestasUsuarioLid = new String[preguntasObtenidasLid.length];   // Arreglo que almacena las respuesta del usuario.

@@ -1,12 +1,12 @@
 /**
- * <h1> Proyecto Integrador -  sistema de contratación 
- * <h2> Programación Orientada a Objetos sección 41</h1>
+ * <h1> Proyecto Integrador -  sistema de contratacion 
+ * <h2> Programacion Orientada a Objetos seccion 41</h1>
  * <h3> Vista (Clase de tipo Vista)  </h2>
  * 
  * 
- * Descripción: Esta clase mostrará toda la información que se necesite que 
+ * Descripcion: Esta clase mostrará toda la informacion que se necesite que 
  * sea vista por el usuario, tanto para dar instrucciones como para solicitar 
- * información o algún otro tipo de interacción.
+ * informacion o algún otro tipo de interaccion.
  * 
  * 
  * @author Grupo 4 
@@ -30,12 +30,12 @@ public class Vista{
     }
 //Mensaje de bienvenida al programa.
     public void bienvenida(){
-        System.out.println("\n------- Bienvenido al programa de contratación es un gusto tenerte aquí hoy -------\n");
+        System.out.println("\n------- Bienvenido al programa de contratacion es un gusto tenerte aquí hoy -------\n");
     }
 
     public void mensajeConcientizacion(){
         System.out.println("\nLa igualdad laboral es el brindarle las mismas condiciones de trabajo tanto a");
-        System.out.println("\nhombres como mujeres sin importar su genero, religión, etnia etcetera. La lucha");
+        System.out.println("\nhombres como mujeres sin importar su genero, religion, etnia etcetera. La lucha");
         System.out.println("contra la desigualdad con respecto al sexo de los trabajadores es una batalla que");
         System.out.println("sigue en pie y esta igualdad es un derecho por el que se sigue luchando hoy en dia,");
         System.out.println("por favor tener en cuenta tomar una decision imparcial con respecto");
@@ -78,7 +78,7 @@ public class Vista{
 		return sc.nextLine();
     } 
 /**
- * Se encarga de mostrar el resultado de los aspirantes solo mostrando su DPI y calificación
+ * Se encarga de mostrar el resultado de los aspirantes solo mostrando su DPI y calificacion
  * @param aspirantesarreglo es el arreglo que contiene los datos de cada aspirante.
  */
     public void mostrarListaResultados(ArrayList<String[]> aspirantesarreglo){
@@ -88,7 +88,7 @@ public class Vista{
         for(int asp =0;asp<aspirantesarreglo.size();asp++){
             if(aspirantesarreglo.get(asp)[0]== null||aspirantesarreglo.get(asp)[0].equals("null")){ 
             }else{    
-                System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuación de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuación de psicologico: " +aspirantesarreglo.get(asp)[5]+ " ---- Promedio de puntuación: " +aspirantesarreglo.get(asp)[6]);
+                System.out.println("DPI: " +aspirantesarreglo.get(asp)[0] + " ---- Puntuacion de liderazgo: " +aspirantesarreglo.get(asp)[4]+ " ---- Puntuacion de psicologico: " +aspirantesarreglo.get(asp)[5]+ " ---- Promedio de puntuacion: " +aspirantesarreglo.get(asp)[6]);
             }
         }
     }
@@ -118,7 +118,7 @@ public class Vista{
         System.out.println("____________________________________________________________________________________");
     }
     /**
-     * Metodo para mostrar cualquier tipo de información
+     * Metodo para mostrar cualquier tipo de informacion
      * @param informacion
      */
     public void verInformacion(String informacion){
@@ -163,7 +163,7 @@ public class Vista{
     public void invalido(){
 
     }
-    //Información de un aspirante DPI y puntuaciones de ambas pruebas.
+    //Informacion de un aspirante DPI y puntuaciones de ambas pruebas.
     public void verAspirantes(){
 
     }
@@ -224,3 +224,5 @@ public class Vista{
         System.out.println("Lo más importante de un aspirante es su desempeño profesional, no se preocupe por nimiedades.");
     } 
 }
+
+
