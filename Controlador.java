@@ -172,8 +172,12 @@ public class Controlador {
                         * Si selecciona la opcion 3 entonces se termina el programa
                         */
                         else if(opcionEmpleador.equals("3")){
-                            modificador.limpiarCompleto();
+                            vista.DivisionAsteriscos();
+                            modificador.limpiarCompleto();//Se encarga de borrar 
+                            vista.DivisionAsteriscos();
+                            vista.salir();
                             System.exit(0);
+                        
                         }else if(opcionEmpleador.equals("4")){
                             vista.salir(); //mensaje de despedida
                             terminar = true;

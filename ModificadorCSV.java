@@ -42,7 +42,7 @@ public class ModificadorCSV {
 
     
 
-    public void limpiarCompleto() throws IOException{ //Fuente: https://www.baeldung.com/java-delete-file-contents. Autor: baeldung
+    public void limpiarCompleto() throws IOException{ //Fuente: https://www.baeldung.com/java-delete-file-contents. Autor: baeldung, Fuente: https://es.stackoverflow.com/questions/39503/borrar-fichero-en-java/219941- Autor: softmolina
         new FileWriter(path, false).close();
         try{
 
@@ -52,12 +52,11 @@ public class ModificadorCSV {
 
             if (!estatus) {
 
-                System.out.println("Error no se ha podido eliminar el  archivo");
+                System.out.println("No se pudo borrar el archivo");
 
            }else{
 
-                System.out.println("Se ha eliminado el archivo exitosamente");
-
+                System.out.println("Archivo eliminado con éxito!");
            }
 
         }catch(Exception e){
