@@ -101,7 +101,6 @@ public class Controlador {
 
                     ArrayList<String> respuestasCorrPsico = sistemaGeneradorPsico.getRespuestasPsico();
                     String respuestasFinalesPsico = sistemaCalificadorPsico.recibirRespuestas(respuestasUsuarioPsico, respuestasCorrPsico);  // Respuestas del usuario a las preguntas de Test Lide. 
-                    System.out.println(respuestasFinalesPsico);
 
                     datosPersona[5] = respuestasFinalesPsico;
                     datosPersona[6] = Double.toString((Double.parseDouble(respuestasFinalesPsico) + Double.parseDouble(respuestasFinalesLid))/2); // Promedio de las notas 
@@ -131,6 +130,8 @@ public class Controlador {
                 ArrayList<String[]> contras = modificador.prepararContrasenas();
                 String con = vista.preguntarContrasena();
                 int a = 0;
+
+                ArrayList<String[]>  asp = modificador.getAspirantesArreglo();
                 for(int i = 0; i<contras.size();i++){
                     if(contras.get(i)[0].equals(con)){
                         
@@ -143,44 +144,53 @@ public class Controlador {
                     /**
                     * Si selecciona la opcion 1 entonces vera los resultados 
                     */
-                    if(a==1){
-                    String opcionEmpleador = vista.menuEmpleadores();
-                    tipoPersona = "Empleador"; 
-                    if(opcionEmpleador.equals("1")){
-                        ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
-                        aspirantesarreglo = modificador.getAspirantesArreglo();
-                        vista.DivisionAsteriscos();
-                        vista.mostrarListaResultados(aspirantesarreglo);
-                        vista.DivisionAsteriscos();
-                    }
+                try{
+                    if(!asp.get(modificador.getSizeAspirantes()-1).equals("null")){
+                        if(a==1){
+                        String opcionEmpleador = vista.menuEmpleadores();
+                        tipoPersona = "Empleador"; 
+                        if(opcionEmpleador.equals("1")){
+                            ArrayList<String[]> aspirantesarreglo = new ArrayList<String[]>();
+                            aspirantesarreglo = modificador.getAspirantesArreglo();
+                            vista.DivisionAsteriscos();
+                            vista.mostrarListaResultados(aspirantesarreglo);
+                            vista.DivisionAsteriscos();
+                        }
 
-                    /**
-                    * Si selecciona la opcion 2 entonces podra pedir cuantos aspirantes quiere escoger
-                    */
-                    else if(opcionEmpleador.equals("2")){
-                        int seleccion = vista.preguntarSeleccionados(modificador.getSizeAspirantes());
+                        /**
+                        * Si selecciona la opcion 2 entonces podra pedir cuantos aspirantes quiere escoger
+                        */
+                        else if(opcionEmpleador.equals("2")){
+                            int seleccion = vista.preguntarSeleccionados(modificador.getSizeAspirantes());
 
-                        ArrayList<String[]> orden = modificador.promediosOrdenados(seleccion);
+                            ArrayList<String[]> orden = modificador.promediosOrdenados(seleccion);
 
-                        vista.mostrarListaResultados(orden);
-                    }
+                            vista.mostrarListaResultados(orden);
+                        }
 
-                    /**
-                    * Si selecciona la opcion 3 entonces se termina el programa
-                    */
-                    else if(opcionEmpleador.equals("3")){
-                        modificador.limpiarCompleto();
-                    }else if(opcionEmpleador.equals("4")){
-                        vista.salir(); //mensaje de despedida
-                        terminar = true;
-                    }
-                
+                        /**
+                        * Si selecciona la opcion 3 entonces se termina el programa
+                        */
+                        else if(opcionEmpleador.equals("3")){
+                            modificador.limpiarCompleto();
+                            System.exit(0);
+                        }else if(opcionEmpleador.equals("4")){
+                            vista.salir(); //mensaje de despedida
+                            terminar = true;
+                        }
+                    
 
-                    else{
-                        vista.invalido();
+                        else{
+                            vista.invalido();
+                        }
+                    }else{
+                        vista.verInformacion("Contrasena incorrecta");
                     }
                 }else{
-                    vista.verInformacion("Contrasena incorrecta");
+                    vista.verInformacion("No existen aspirantes en la base de datos");
+                }
+                }catch(Exception e){
+                    vista.verInformacion("No existen aspirantes en la base de datos");
                 }
 
                 break;	

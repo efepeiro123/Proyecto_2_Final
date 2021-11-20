@@ -42,27 +42,32 @@ public class ModificadorCSV {
 
     
 
-    public void limpiarCompleto(){
-        String[] remp = new String[7];
-        for(int p = 0; p< aspirantesArreglo.size();p++){
-            aspirantesArreglo.set(p, remp);
-        }
-
+    public void limpiarCompleto() throws IOException{ //Fuente: https://www.baeldung.com/java-delete-file-contents. Autor: baeldung
+        new FileWriter(path, false).close();
         try{
-            FileWriter fw = new FileWriter(path);
-            BufferedWriter bw = new BufferedWriter(fw);
-            for(int o=0;o<aspirantesArreglo.size();o++){
-                bw.write(""+","+""+","+""+","+""+","+""+","+""+","+"");
-                if(o < (aspirantesArreglo.size()-1)){
-                    bw.newLine();
-                }
-            }
-            bw.close();
-        }catch(IOException e){
-            //System.out.println("");
-            //e.printStackTrace();
+
+            File archivo = new File("aspirantesNuevo.csv");
+           
+            boolean estatus = archivo.delete();;
+
+            if (!estatus) {
+
+                System.out.println("Error no se ha podido eliminar el  archivo");
+
+           }else{
+
+                System.out.println("Se ha eliminado el archivo exitosamente");
+
+           }
+
+        }catch(Exception e){
+
+           System.out.println(e);
+
         }
+        new FileWriter(path, false).close();
     }
+    
 
     /**
      * Se encarga de guardar los datos por fila en un arraylist el cual luego será utilizado por guardar los datos del nuevo aspirante.
@@ -108,7 +113,7 @@ public class ModificadorCSV {
                 }
             }
             bw.close();
-        }catch(IOException e){
+        }catch(Exception e){
             //System.out.println("");
             //e.printStackTrace();
         }
